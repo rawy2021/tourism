@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projecttest/core/router/app_router.dart';
 import 'package:projecttest/screen/login-screen.dart';
 import 'package:projecttest/screen/sign-up.dart';
 
@@ -12,13 +13,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      initialRoute: LoginScreen.id ,
-      routes: {
-        LoginScreen.id : (context)=>const LoginScreen(),
-        SignUpScreen.id : (context)=>const SignUpScreen()
-      }
+      routerConfig: router,
     );
   }
 }
