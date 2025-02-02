@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../const/color.dart';
+import '../core/utils/app_color.dart';
 
 class CustomTextFiled extends StatelessWidget {
   const CustomTextFiled({super.key,
