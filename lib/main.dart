@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:projecttest/core/router/app_router.dart';
-import 'package:projecttest/screen/login-screen.dart';
-import 'package:projecttest/screen/sign-up.dart';
+import 'package:projecttest/core/utils/app_color.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -15,6 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.kMainColor
+      ),
       routerConfig: router,
     );
   }
