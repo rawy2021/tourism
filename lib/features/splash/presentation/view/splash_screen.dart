@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:projecttest/core/function/navigation.dart';
 import 'package:projecttest/core/utils/app_text_style.dart';
 
@@ -14,6 +13,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
+    // bool isOnBoardingVisited =getIT<CacheHelper>().getData(key: "isOnBoardingVisited")??false;
+    // if(isOnBoardingVisited ==true){
+    //   delayedNavigate(context,"/signUpView");
+    // }else{
+    //   delayedNavigate(context,"/onBoarding");
+    // }
     delayedNavigate(context);
     super.initState();
   }
@@ -34,7 +39,7 @@ void delayedNavigate (context){
   Future.delayed(
       const Duration(seconds: 2),
           (){
-        customNavigate(context, "/onBoarding");
+        customNavigateReplacement(context, "/onBoarding");
       }
   );
 }

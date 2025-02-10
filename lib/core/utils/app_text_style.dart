@@ -23,10 +23,16 @@ abstract class CustomTextStyles{
     color: AppColors.kTextColor,
     fontFamily: "Cairo",
   );
-  static final cairo300style24BtnTextWhite=  TextStyle(
+  static const cairo300style24BtnTextWhite=  TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w300,
     color: Colors.white,
     fontFamily: "Cairo",
   );
+
+  static const cairo600style28= TextStyle(
+  fontSize: 28,
+  fontWeight: FontWeight.w600,
+  color:Colors.black,
+  fontFamily: "Cairo",);
 }
