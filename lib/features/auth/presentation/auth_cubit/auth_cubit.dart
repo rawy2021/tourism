@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'auth_state.dart';
 
@@ -9,6 +10,8 @@ class AuthCubit extends Cubit<AuthState>{
    String? lastName;
    String? emailAddress;
    String? password;
+   GlobalKey<FormState> signUpFormKey = GlobalKey();
+   bool? termsAndConditionCheckBoxValue =false;
 
   signUpEmailAndPassword() async{
     try {
@@ -25,9 +28,15 @@ class AuthCubit extends Cubit<AuthState>{
         emit(SignUpFailureState(errorMessage: 'The account already exists for that email.'));
       }
     } catch (e) {
+      print(e.toString());
       emit(SignUpFailureState(errorMessage: e.toString()));
     }
 
+  }
+
+  updateTermsAndConditionCheckBox({required newValue}){
+    termsAndConditionCheckBoxValue=newValue;
+    emit(TermsAndConditionUpdateState());
   }
 
 }

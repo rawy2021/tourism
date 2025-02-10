@@ -17,7 +17,8 @@ class SignUpView extends StatelessWidget {
           SliverToBoxAdapter(child: CustomWelcome(),),
           SliverToBoxAdapter(child: CustomSignUpForm()),
           SliverToBoxAdapter(child: SizedBox(height: 20,),),
-          SliverToBoxAdapter(child: HaveAnAccount(text1: "Have an Account ",text2: "Sign Up",),)
+          SliverToBoxAdapter(child: HaveAnAccount(text1: "Have an Account ",text2: "Sign Up",),),
+          SliverToBoxAdapter(child: SizedBox(height: 20,),),
         ],
       )
 

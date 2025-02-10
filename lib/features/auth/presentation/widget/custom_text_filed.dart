@@ -12,15 +12,20 @@ class CustomTextFormField extends StatelessWidget {
   void Function(String)? onChanged;
   void Function(String)? onFieldSubmitted;
 
-
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 8.0,left: 8,top: 28),
       child: TextFormField(
+        validator: (value){
+          if(value!.isEmpty){
+            return "This Field is Required";
+          }else{
+            return null;
+          }
+        },
         onChanged: onChanged,
         onFieldSubmitted: onFieldSubmitted,
-
         decoration: InputDecoration(
           labelText: labelText,
           labelStyle: CustomTextStyles.cairo300style16,
