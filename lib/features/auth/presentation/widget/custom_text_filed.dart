@@ -7,12 +7,17 @@ class CustomTextFormField extends StatelessWidget {
     required this.labelText,
     this.onChanged,
     this.onFieldSubmitted,
+      this.suffixIcon,
+     this.obscureText,
   });
   final String labelText;
+  final Widget? suffixIcon;
+   final bool? obscureText;
   void Function(String)? onChanged;
   void Function(String)? onFieldSubmitted;
 
-  @override
+
+   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 8.0,left: 8,top: 28),
@@ -26,8 +31,10 @@ class CustomTextFormField extends StatelessWidget {
         },
         onChanged: onChanged,
         onFieldSubmitted: onFieldSubmitted,
+        obscureText: obscureText ?? false,
         decoration: InputDecoration(
           labelText: labelText,
+          suffixIcon: suffixIcon,
           labelStyle: CustomTextStyles.cairo300style16,
           border: getBorderStyle(),
           enabledBorder: getBorderStyle(),

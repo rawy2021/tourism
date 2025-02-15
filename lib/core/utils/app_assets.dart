@@ -3,4 +3,5 @@ abstract class Assets{
   static const onBoardingOne = "assets/images/onBoarding1.webp";
   static const onBoardingTow = "assets/images/onBoarding2.webp";
   static const onBoardingThree = "assets/images/onBoarding3.webp";
+  static const signInImage = "assets/images/destination-egypt.png";
 }

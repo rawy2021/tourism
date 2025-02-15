@@ -26,7 +26,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               const SizedBox(height: 20,),
                CustomNavBar(onTap: () {
              //   getIT<CacheHelper>().saveData(key: "isOnBoardingVisited", value: true);
-                customNavigateReplacement(context, "/signUpView");
+                customNavigateReplacement(context, "/signInView");
               },),
               OnBoardingWidget(
                 onPageChanged: (index){

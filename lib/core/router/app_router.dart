@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:projecttest/core/services/service_locator.dart';
 import 'package:projecttest/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:projecttest/features/auth/presentation/view/sign_up_view.dart';
+import 'package:projecttest/features/home/presentation/views/home_view.dart';
 import 'package:projecttest/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:projecttest/features/splash/presentation/view/splash_screen.dart';
 
@@ -25,5 +26,9 @@ final GoRouter router = GoRouter(routes: [
     builder: (context , state) => BlocProvider(
         create: (context)=> getIT<AuthCubit>(),
         child: const SingInView()),
+  ),
+
+  GoRoute(path: "/home",
+    builder: (context , state) => const HomeView(),
   ),
 ]);
